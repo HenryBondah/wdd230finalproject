@@ -1,0 +1,159 @@
+/* Common CSS for all screens */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  nav ul li a:hover,
+  .active {
+    background-color: #f0f0f4;
+    color: #000000;
+    border-radius: 4px;
+    display: block;
+    width: 63px;
+    height: 21px;
+    text-align: center;
+  }
+  
+  .logo img {
+    height: 80px;
+    border-radius: 40px 0 40px 0;
+    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .social-media img {
+    height: 30px;
+    width: 30PX;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .content {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.image {
+margin: 20px;
+}
+
+footer img{
+    margin: 10px;
+    margin-left: 230px;
+    border-radius: 10px;
+    width: 100px;
+  }
+  footer{
+    display: block;
+    padding: 2px;
+    background-color: #2a3a39;
+  }
+  footer p{
+    width: 100%;
+    text-align: center;
+    display: block;
+    justify-content: flex-end;
+    color: rgb(255, 255, 255);
+  }
+  
+  .footer-content{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+  }
+  .footer-base{
+    text-align: center;
+    color: #1e1a1a;
+    background-color: #ffffff;
+  }
+  .footer-base p{
+    color: #1e1a1a;
+  }
+  .footer-contact{
+    text-align: center;
+  }
+  footer hr{
+    background-color: #0800f9;    
+    border: none;        
+  }
+  .footer-map {
+    font-size: 60px;
+    color: rgb(0, 13, 255);
+    justify-self: flex-end;
+    margin-right: 230px;
+  }
+  footer p, h4, a{
+    color: #ffffff;
+  }
+    
+    footer h4, p{
+        margin: 5px;
+    }
+
+/* Small screen CSS */
+@media only screen and (max-width: 600px) {
+/* Add styles for small screen */
+body {
+  font-size: 14px;
+}
+.image {
+  width: 80%;
+  margin: auto;
+}
+}
+
+/* Medium screen CSS */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+/* Add styles for medium screen */
+body {
+  font-size: 16px;
+}
+.image {
+  width: 40%;
+  float: left;
+  margin: 20px;
+}
+}
+
+/* Large screen CSS */
+@media only screen and (min-width: 1025px) {
+/* Add styles for large screen */
+body {
+  font-size: 18px;
+}
+.image {
+    width: 30%;
+    float: left;
+    margin: 20px;
+    margin-left: 80px;
+}
+}
