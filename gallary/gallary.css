@@ -1,6 +1,7 @@
-
-  
-  /* Header */
+/* Header */
+h1, h2, p{font-family: 'Inconsolata', monospace;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;}
   header {
     display: flex;
     justify-content: space-between;
@@ -25,7 +26,8 @@
     border-radius: 40px 0 40px 0;
     box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.5);
   }
-  
+  nav ul {display: none;}
+  nav ul.open {display: block;}
   nav ul {
     display: flex;
     list-style: none;
@@ -46,6 +48,65 @@
     height: 30px;
     width: 30PX;
   }
+  /* Footer *//* Footer */
+footer img{
+  margin: 10px;
+
+  border-radius: 10px;
+  width: 100px;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  background-color: #2a3a39;
+}
+footer p{
+  width: 100%;
+  text-align: center;
+  display: block;
+  justify-content: flex-end;
+  color: rgb(255, 255, 255);
+}
+
+.footer-content{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  width: 100%;
+  justify-items: center;
+  
+}
+.footer-base{
+  text-align: center;
+  color: #1e1a1a;
+  background-color: #ffffff;
+  width: 100%;
+}
+.footer-base p{
+  color: #1e1a1a;
+}
+.footer-contact{
+  text-align: center;
+}
+footer hr{
+  background-color: #0800f9;    
+  border: none;        
+}
+.footer-map {
+  font-size: 60px;
+  color: rgb(0, 13, 255);
+  justify-self: center;
+  
+}
+footer p, h4, a{
+  color: #ffffff;
+}
+  
+  footer h4, p{
+      margin: 5px;
+  }
 /*Discover Page*/
 .discover_title {
     text-align: center;
@@ -55,6 +116,9 @@
     flex-direction: column;
     
 
+}
+#hamburgerBtn{
+  display: none;
 }
 .discover_image_container {
     width: 100%;
@@ -87,7 +151,6 @@
 }
 .main_discover {
     max-width: 1600px;
-
 }
 .column {
     gap: 10px;
@@ -98,7 +161,6 @@
     margin-top: 30px;
     margin-left: 20px;
     margin-right: 20px;
-
 }
 
 .discover_image_description {
@@ -107,9 +169,7 @@
     background-color: rgb(0, 12, 185);
     opacity: 1;
     width: 100%;
-    border-radius: 0px 0px 10px 10px;
-    
-   
+    border-radius: 0px 0px 10px 10px; 
 }
 .discover_image_description p {
     color: white;
@@ -122,8 +182,8 @@
     to {
         background-position: 120% 0%, 50% 0%;
     }
+    
 }
-
 @media screen and (min-width:900px) {
  
     main {
@@ -142,9 +202,11 @@
         transition: transform 330ms ease-in-out;
         
     }
-
+    #hamburgerBtn{
+      display: none;
+    }
+    
 }
-
 @media  screen and (min-width:1100px) {
     main {
         grid-template-columns: 20% 1fr 20%;
@@ -161,7 +223,6 @@
         transition: transform 330ms ease-in-out;
         
     }
-
     .galery_container {
         display: flex;
         flex-direction: row;
@@ -174,7 +235,6 @@
     .discover_image_description {
         display: none;
     }
-   
     .discover_image_container:hover .discover_image_description {
         display: block;
         position: absolute;
@@ -184,56 +244,26 @@
         width: 100%;
         border-radius: 0px 0px 10px 10px;
     }
-    /* Footer */
-footer img{
-  margin: 10px;
-  margin-left: 230px;
-  border-radius: 10px;
-  width: 100px;
-}
-footer{
-  display: block;
-  padding: 2px;
-  background-color: #2a3a39;
-}
-footer p{
-  width: 100%;
-  text-align: center;
-  display: block;
-  justify-content: flex-end;
-  color: rgb(255, 255, 255);
-}
-.footer-content{
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-}
-.footer-base{
-  text-align: center;
-  color: #000000;
-  background-color: #ffffff;
-}
-.footer-base p{
-  color: #000000;
-}
-.footer-contact{
-  text-align: center;
-}
-footer hr{
-  background-color: #0800f9;    
-  border: none;        
-}
-.footer-map {
-  font-size: 60px;
-  color: rgb(0, 13, 255);
-  justify-self: flex-end;
-  margin-right: 230px;
-}
-footer p, h4, a{
-  color: #ffffff;
-}
-  
-  footer h4, p{
+    .hamburger-menu {
+      display: block;
+      cursor: pointer;
+    }
+    .hamburger-menu .bar {
+      display: block;
+      height: 2px;
+      width: 20px;
       margin: 5px;
-  }
+      background-color: black;
+      transition: 0.4s;
+    }
+    .hamburger-menu .bar:first-child {
+      transform: rotate(-45deg) translate(-8px, 4px);
+    }
+    .hamburger-menu .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger-menu .bar:last-child {
+      transform: rotate(45deg) translate(-8px, -4px);
+    }
+  
 }

@@ -1,4 +1,7 @@
 /* Header */
+h1, h2, p{font-family: 'Inconsolata', monospace;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;}
 header {
     display: flex;
     justify-content: space-between;
@@ -16,6 +19,30 @@ header {
     width: 63px;
     height: 21px;
     text-align: center;
+  }
+  #hamburgerBtn{
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger-menu .bar {
+    display: block;
+    height: 2px;
+    width: 20px;
+    margin: 5px;
+    background-color: black;
+    transition: 0.4s;
+  }
+  .hamburger-menu .bar:first-child {
+    transform: rotate(-45deg) translate(-8px, 4px);
+  }
+  .hamburger-menu .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-menu .bar:last-child {
+    transform: rotate(45deg) translate(-8px, -4px);
   }
   
   .logo img {
@@ -132,55 +159,62 @@ header {
       }
 
       
-      /* Footer */
+     /* Footer *//* Footer */
 footer img{
-    margin: 10px;
-    margin-left: 230px;
-    border-radius: 10px;
-    width: 100px;
+  margin: 10px;
+
+  border-radius: 10px;
+  width: 100px;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  background-color: #2a3a39;
+}
+footer p{
+  width: 100%;
+  text-align: center;
+  display: block;
+  justify-content: flex-end;
+  color: rgb(255, 255, 255);
+}
+
+.footer-content{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  width: 100%;
+  justify-items: center;
+  
+}
+.footer-base{
+  text-align: center;
+  color: #1e1a1a;
+  background-color: #ffffff;
+  width: 100%;
+}
+.footer-base p{
+  color: #1e1a1a;
+}
+.footer-contact{
+  text-align: center;
+}
+footer hr{
+  background-color: #0800f9;    
+  border: none;        
+}
+.footer-map {
+  font-size: 60px;
+  color: rgb(0, 13, 255);
+  justify-self: center;
+  
+}
+footer p, h4, a{
+  color: #ffffff;
+}
+  
+  footer h4, p{
+      margin: 5px;
   }
-  footer{
-    display: block;
-    padding: 2px;
-    background-color: #2a3a39;
-  }
-  footer p{
-    width: 100%;
-    text-align: center;
-    display: block;
-    justify-content: flex-end;
-    color: rgb(255, 255, 255);
-  }
-  .footer-content{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-  }
-  .footer-base{
-    text-align: center;
-    color: #000000;
-    background-color: #ffffff;
-  }
-  .footer-base p{
-    color: #000000;
-  }
-  .footer-contact{
-    text-align: center;
-  }
-  footer hr{
-    background-color: #0800f9;    
-    border: none;        
-  }
-  .footer-map {
-    font-size: 60px;
-    color: rgb(0, 13, 255);
-    justify-self: flex-end;
-    margin-right: 230px;
-  }
-  footer p, h4, a{
-    color: #ffffff;
-  }
-    
-    footer h4, p{
-        margin: 5px;
-    }

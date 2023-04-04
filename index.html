@@ -3,37 +3,35 @@
 <html>
 <head>
   <title>Bountiful foods Home</title>
-  <link rel="stylesheet" type="text/css" href="/style/base.css">
-  <link rel="stylesheet" href="/style/medium.css">
   <link rel="stylesheet" href="./style/large.css">
-  <link rel="stylesheet" href="/weather/weather.html">
+  <link rel="stylesheet" href="/style/medium.css">
+  <link rel="stylesheet" type="text/css" href="/style/base.css">
 
-  <script src="../scripts/date.js" defer></script>
+  <script src="./scripts/date.js" defer></script>
+  <script src="./scripts/hambergar.js" defer></script>
+  <script src="./scripts/weather.js" defer></script>
   <script src="https://kit.fontawesome.com/5716228e59.js" crossorigin="anonymous"></script>
   <link rel="icon" href="./favicon_io/favicon.ico" >
-
 </head>
 <body>
   <header>
     <div class="logo">
       <img src="./images/fruitlogo.jpeg" alt="My Logo">
     </div>
-    <div class="title">
-  </div>
+<p>Today is <span id="date"></span></p>
+<div class="social-media">
+  <a href="#"><img src="./images/FB" alt="Social Media Icon"></a>
+  <a href="#"><img src="./images/TWITTERLOGO" alt="Social Media Icon"></a>
+  <a href="#"><img src="./images/IG" alt="Social Media Icon"></a>
+</div>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
+      <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button>
+      <ul id="primaryNav">
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./about/about.html">About</a></li>
         <li><a href="./contact/contact.html">contact</a></li>
       </ul>
     </nav>
-    <p>Today is <span id="date"></span></p>
-
-    <div class="social-media">
-      <a href="#"><img src="./images/FB" alt="Social Media Icon"></a>
-      <a href="#"><img src="./images/TWITTERLOGO" alt="Social Media Icon"></a>
-      <a href="#"><img src="./images/IG" alt="Social Media Icon"></a>
-    </div>
   </header>
 <br>
   <div class="banner">
@@ -52,6 +50,7 @@
           <p>Temperature: <span id="temperature"></span> &deg;F</p>
           <p>Condition: <span id="condition"></span></p>
           <p>Humidity: <span id="humidity"></span>%</p>
+          <img src="" alt="" id="weather-icon">
         </div>
         <div class="forecast">
           <h5>3-Day Forecast</h5>
@@ -79,6 +78,10 @@
                     <h2>Make Your Own Drink</h2>
                     <hr>
                     <p> Use Any of our available uncountable flavors to make a fresh fresh Drink. Be creative and Refresh Yourself.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <button onclick="window.location.href='./freshpage/freshpage.html'">Help Yourself</button> 
     </div>
     <div class="grid-item">
@@ -87,6 +90,10 @@
                     <hr>
                     <p> "Step into our fruit drink shop's gallery and discover a world of fresh flavors. Indulge in the goodness of 
                       handpicked fruits, blended to perfection for a refreshing and nourishing experience.".</p>
+                      <br>
+                      <br>
+                    
+                    <br>
                     <button onclick="window.location.href='./gallary/gallery.html'">Exploy</button> 
     </div>
   </div>

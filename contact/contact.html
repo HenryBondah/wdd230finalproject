@@ -3,6 +3,8 @@
 <head>
   <title>Contact</title>
 <link rel="stylesheet" href="../contact/contact.css">
+<script src="../scripts/hambergar.js" defer></script>
+
   <script src="../scripts/date.js" defer></script>
   <script src="https://kit.fontawesome.com/5716228e59.js" crossorigin="anonymous"></script>
   <link rel="icon" href="./favicon_io/favicon.ico" >
@@ -13,20 +15,20 @@
     <div class="logo">
       <img src="../images/fruitlogo.jpeg" alt="My Logo">
     </div>
+<p>Today is <span id="date"></span></p>
+<div class="social-media">
+  <a href="#"><img src="../images/FB" alt="Social Media Icon"></a>
+  <a href="#"><img src="../images/TWITTERLOGO" alt="Social Media Icon"></a>
+  <a href="#"><img src="../images/IG" alt="Social Media Icon"></a>
+</div>
     <nav>
-      <ul>
+      <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button>
+      <ul id="primaryNav">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about/about.html">About</a></li>
         <li><a href="../contact/contact.html">contact</a></li>
       </ul>
     </nav>
-    <p>Today is <span id="date"></span></p>
-
-    <div class="social-media">
-      <a href="#"><img src="../images/FB" alt="Social Media Icon"></a>
-      <a href="#"><img src="../images/TWITTERLOGO" alt="Social Media Icon"></a>
-      <a href="#"><img src="../images/IG" alt="Social Media Icon"></a>
-    </div>
   </header>
 <br>
 	<main>
@@ -45,10 +47,9 @@
 				<label for="message">Message:</label>
 				<textarea id="message" name="message" required></textarea>
 
-				<button type="submit">Send</button>
+        <button onclick="window.location.href='../freshpage/thankyou.html'">Send</button> 
 			</form>
-		</section>
-		
+		</section>		
 	</main>
 	  <!-- footer -->
       <br>

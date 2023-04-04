@@ -1,9 +1,11 @@
 
 const apiKey = 'f93916b337d971e554180678001160ef';
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}&units=imperial`;
+const lat = "33.158092"
+const lon = "-117.350594"
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
-const currentTemp = document.getElementById('current-temp');
-const weatherCondition = document.getElementById('weather-condition');
+const currentTemp = document.getElementById('temperature');
+const weatherCondition = document.getElementById('condition');
 const humidity = document.getElementById('humidity');
 const weatherIcon = document.getElementById('weather-icon');
 const date1 = document.getElementById('date-1');
@@ -16,6 +18,7 @@ const temp3 = document.getElementById('temp-3');
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
+   
     // Update current weather information
     currentTemp.textContent = `${Math.round(data.current.temp)}°`;
     weatherCondition.textContent = data.current.weather[0].description;

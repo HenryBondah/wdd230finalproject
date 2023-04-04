@@ -4,31 +4,34 @@
 <head>
   <title>bountiful gallary</title>
   <link rel="stylesheet" href="../gallary/gallary.css">
+  <link rel="stylesheet" href="../gallary/small.css">
+
   <script src="../scripts/date.js" defer></script>
+  <script src="../scripts/hambergar.js" defer></script>
   <script src="https://kit.fontawesome.com/5716228e59.js" crossorigin="anonymous"></script>
   <link rel="icon" href="./favicon_io/favicon.ico" >
 
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="../images/fruitlogo.jpeg" alt="My Logo">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about/about.html">About</a></li>
-        <li><a href="../contact/contact.html">contact</a></li>
-      </ul>
-    </nav>
+    <header>
+        <div class="logo">
+          <img src="../images/fruitlogo.jpeg" alt="My Logo">
+        </div>
     <p>Today is <span id="date"></span></p>
-
     <div class="social-media">
-        <a href="#"><img src="../images/FB" alt="Social Media Icon"></a>
-        <a href="#"><img src="../images/TWITTERLOGO" alt="Social Media Icon"></a>
-        <a href="#"><img src="../images/IG" alt="Social Media Icon"></a>
-      </div>
-  </header>
+      <a href="#"><img src="../images/FB" alt="Social Media Icon"></a>
+      <a href="#"><img src="../images/TWITTERLOGO" alt="Social Media Icon"></a>
+      <a href="#"><img src="../images/IG" alt="Social Media Icon"></a>
+    </div>
+        <nav>
+          <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button>
+          <ul id="primaryNav">
+            <li><a href="#">Home</a></li>
+            <li><a href="./about/about.html">About</a></li>
+            <li><a href="./contact/contact.html">contact</a></li>
+          </ul>
+        </nav>
+      </header>
 <br>
 <section class="main_discover">
     <h1 class="discover_title">Bountiful Gallery</h1>
