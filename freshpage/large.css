@@ -143,6 +143,13 @@ header {
         display: grid;
         gap: 10px;
     }
+    .fruit-image img[data-src]{
+      filter: blur(0.3em);
+    }
+    .fruit-image img{            
+      filter: blur(0.0em);
+      transition: filter .9s;  
+    }
     
       .discoverexploy{
         background-color: #4CAF50;

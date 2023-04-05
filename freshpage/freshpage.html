@@ -2,12 +2,11 @@
 <html>
 <head>
   <title>Fresh page</title>
-  <!-- <link rel="stylesheet" type="text/css" href="/style/base.css">
-  <link rel="stylesheet" href="/style/medium.css"> -->
 <link rel="stylesheet" href="../freshpage/large.css">
 <link rel="stylesheet" href="../freshpage/meduim.css">
 <link rel="stylesheet" href="../freshpage/small.css">
   <script src="../scripts/date.js" defer></script>
+  <script src="../scripts/lazy.js" defer></script>
   <script src="../scripts/hambergar.js" defer></script>
   <script src="../freshpage/fresh.js" defer></script>
 
@@ -37,40 +36,68 @@
     </nav>
   </header>
   <br>
-  <body>
-    <div class="form-container">
-      <form id="order-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required><br><br>
-        
-        <label for="fruit1">Fruit 1:</label>
-        <select id="fruit1" name="fruit1">
-          <option value="">Select a fruit</option>
-        </select><br><br>
-        
-        <label for="fruit2">Fruit 2:</label>
-        <select id="fruit2" name="fruit2">
-          <option value="">Select a fruit</option>
-        </select><br><br>
-        
-        <label for="fruit3">Fruit 3:</label>
-        <select id="fruit3" name="fruit3">
-          <option value="">Select a fruit</option>
-        </select><br><br>
 
-        <label for="message">Special Instructions:</label>
-				<textarea id="message" name="message"></textarea><br><br>
-
-        
-        <button onclick="window.location.href='../freshpage/orderconfimation.html'">Submit</button> 
-      </form>
-
+  <div class="form-container">
+    <form id="order-form" action="./orderconfimation.html">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required><br><br>
+      
+      <label for="fruit1">Fruit 1:</label>
+      <select id="fruit1" name="fruit1">
+        <option value="">Select a fruit</option>
+      </select><br><br>
+      
+      <label for="fruit2">Fruit 2:</label>
+      <select id="fruit2" name="fruit2">
+        <option value="">Select a fruit</option>
+      </select><br><br>
+      
+      <label for="fruit3">Fruit 3:</label>
+      <select id="fruit3" name="fruit3">
+        <option value="">Select a fruit</option>
+      </select><br><br>
+  
+      <label for="message">Special Instructions:</label>
+      <textarea id="message" name="message"></textarea><br><br>
+  
+      <button type="submit-btn">goo</button> 
+    </form>
+  
+  <script>
+    // Handle form submission
+    document.querySelector('#order-form').addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent default form submission behavior
+  
+      // Get form values
+      const name = document.querySelector('#name').value;
+      const email = document.querySelector('#email').value;
+      const phone = document.querySelector('#phone').value;
+      const fruit1 = document.querySelector('#fruit1').value;
+      const fruit2 = document.querySelector('#fruit2').value;
+      const fruit3 = document.querySelector('#fruit3').value;
+      const message = document.querySelector('#message').value;
+  
+      // Construct URL with form values
+      const url = new URL('/orderconfimation.html', window.location);
+      url.searchParams.set('name', name);
+      url.searchParams.set('email', email);
+      url.searchParams.set('phone', phone);
+      url.searchParams.set('fruit1', fruit1);
+      url.searchParams.set('fruit2', fruit2);
+      url.searchParams.set('fruit3', fruit3);
+      url.searchParams.set('message', message);
+  
+      // Redirect to confirmation page with form values in URL
+      window.location.href = url.toString();
+    });
+  </script>
+  
       <div class="fruit-image-container">
         <img class="fruit-image" src="/images/fruit" alt="Fruits">
         <div class="discoverexploy">

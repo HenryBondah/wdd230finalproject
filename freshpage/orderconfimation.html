@@ -4,8 +4,6 @@
 <html>
 <head>
   <title>Order Confirmation</title>
-  <!-- <link rel="stylesheet" type="text/css" href="/style/base.css">
-  <link rel="stylesheet" href="/style/medium.css"> -->
   <link rel="stylesheet" href="../freshpage/large.css">
   <link rel="stylesheet" href="../freshpage/orderconfimation.css">
 
@@ -39,28 +37,29 @@
   </header>
   <br>
   <main>
-    <h1>Order Confirmation</h1>
-    <p>Thank you for your order!</p>
-    <h2>Order Details:</h2>
-    <div id="order-form"></div>
-    
+    <div class="confirmation-container">
+      <h2>Thank you for your order!</h2>
+      <p>Name: <span id="yourname"></span></p>
+      <p>Email: <span id="youremail"></span></p>
+      <p>Phone: <span id="yourphone"></span></p>
+      <p>Fruit 1: <span id="yourfruit1"></span></p>
+      <p>Fruit 2: <span id="yourfruit2"></span></p>
+      <p>Fruit 3: <span id="yourfruit3"></span></p>
+
+      <p>Special Instructions: <span id="yourmessage"></span></p>
+    </div>
     <script>
-      // Get the input values from the form
-      const firstName = window.location.search.split('firstName=')[1];
-      const email = window.location.search.split('email=')[1];
-      const phone = window.location.search.split('phone=')[1];
-      const fruits = window.location.search.split('fruits=')[1].split(',');
-      const specialInstructions = window.location.search.split('specialInstructions=')[1];
-      
-      // Display the input values in the output area
-      const outputArea = document.getElementById('output-area');
-      outputArea.innerHTML = `
-        <p><strong>First Name:</strong> ${firstName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Fruits:</strong> ${fruits.join(', ')}</p>
-        <p><strong>Special Instructions:</strong> ${specialInstructions}</p>
-      `;
+      // Retrieve form values from URL and display on page
+      const url = new URL();
+      const params = url.searchParams;
+    
+      document.querySelector('#yourname').textContent = params.get('name');
+      document.querySelector('#youremail').textContent = params.get('email');
+      document.querySelector('#yourphone').textContent = params.get('phone');
+      document.querySelector('#yourfruit1').textContent = params.get('fruit1');
+      document.querySelector('#yourfruit2').textContent = params.get('fruit2');
+      document.querySelector('#yourfruit3').textContent = params.get('fruit3');
+      document.querySelector('#yourmessage').textContent = params.get('message');
     </script>
   </main>
 

@@ -90,6 +90,17 @@ padding: 20px;
 .image {
 margin: 20px;
 }
+.image img[data-src]{
+  filter: blur(0.3em);
+  justify-content: center;
+  width: 100%;
+}
+.image img{            
+  filter: blur(0.0em);
+  transition: filter .5s;  
+  justify-content: center;
+  width: 100%;
+}
 
 /* Footer *//* Footer */
 footer img{
