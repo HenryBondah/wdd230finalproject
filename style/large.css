@@ -15,14 +15,15 @@ header {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-nav ul li a:hover,
-.active {
+nav a {
+  padding:5px;
+}
+nav ul li a:hover {
   background-color: #f0f0f4;
-  color: #000000;
+
   border-radius: 4px;
   display: block;
-  width: 63px;
-  height: 21px;
+
   text-align: center;
 }
 
@@ -37,6 +38,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 nav li {
@@ -64,14 +66,41 @@ nav a {
   transition: filter .4s;  
   justify-content: center;
   width: 100%;
+  position: absolute;
+}
+#calltoaction {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #ff912a;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  padding: 14px;
+  text-align: center;
+  border-radius: 50px;
+}
+#calltoaction h2{
+  color: #ffffff;
+  opacity: none;
+}
+.banner button {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #565656;
+  font-size: 25px;
+  margin-top: 7px;
 }
 .banner {
   position: relative;
+  height: 500px;
 }
 
 .banner img {
   width: 100%;
   height: 500px;
+  object-fit: cover;
 }
 
 h1{

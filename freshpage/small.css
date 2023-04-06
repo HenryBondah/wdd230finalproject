@@ -41,4 +41,9 @@
       .hamburger-menu .bar:last-child {
         transform: rotate(45deg) translate(-8px, -4px);
       }
+      .form-container {
+        display: block;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
   }

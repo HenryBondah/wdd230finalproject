@@ -159,6 +159,7 @@ footer p, h4, a{
 }
 .main_discover {
     max-width: 1600px;
+    margin: auto;
 }
 .column {
     gap: 10px;

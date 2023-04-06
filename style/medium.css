@@ -82,12 +82,18 @@
     
     /* Banner */
     .banner {
-      height: 260px;
       background-image: url('banner.jpg');
       background-position: center;
       background-size: cover;
       position: relative;
     }
+    .banner button {
+      width: fit-content;
+      margin: 0 auto;
+      background-color: #565656;
+      font-size: 30px;
+      margin-top: 14px;
+  }
     button {
       background-color: #505050;
       color: white;
@@ -98,7 +104,19 @@
       cursor: pointer;
       top: 70px;
     }
-   
+    #calltoaction {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      background-color: #ff912a;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      padding: 14px;
+      text-align: center;
+      border-radius: 80px;
+  }
     
     /* Grid */
     .grid {
