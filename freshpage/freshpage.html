@@ -9,6 +9,8 @@
   <script src="../scripts/lazy.js" defer></script>
   <script src="../scripts/hambergar.js" defer></script>
   <script src="../freshpage/fresh.js" defer></script>
+  <script src="../scripts/orderconfirmation.js" defer></script>
+
 
   <link rel="icon" href="./favicon_io/favicon.ico" >
 
@@ -37,26 +39,26 @@
   <br>
 
   <div class="form-container">
-    <form id="order-form"  method="get" action="./orderconfimation.html">
+    <form id="order-form" method="get" action="../freshpage/orderconfimation.html">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required><br><br>
-      
+  
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required><br><br>
-      
+  
       <label for="phone">Phone:</label>
       <input type="tel" id="phone" name="phone" required><br><br>
-      
+  
       <label for="fruit1">Fruit 1:</label>
       <select id="fruit1" name="fruit1">
         <option value="">Select a fruit</option>
       </select><br><br>
-      
+  
       <label for="fruit2">Fruit 2:</label>
       <select id="fruit2" name="fruit2">
         <option value="">Select a fruit</option>
       </select><br><br>
-      
+  
       <label for="fruit3">Fruit 3:</label>
       <select id="fruit3" name="fruit3">
         <option value="">Select a fruit</option>
@@ -65,8 +67,10 @@
       <label for="message">Special Instructions:</label>
       <textarea id="message" name="message"></textarea><br><br>
   
-      <button type="submit">Send</button> 
+      <button type="submit">Send</button>
     </form>
+    </form>
+    
   
       <div class="fruit-image-container">
         <img class="fruit-image" src="../images/fruit" alt="Fruits">
